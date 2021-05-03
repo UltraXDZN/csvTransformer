@@ -17,14 +17,18 @@ namespace csvTransformer
         public NotifyEvent notifyDelegate;
 
         FormFiltriranje filtriranjeForma = null;
-        public FormPregled(NotifyEvent notify = null)
+
+        Form mainForm { get; set; }
+        public FormPregled(Form main, NotifyEvent notify = null)
         {
             InitializeComponent();
             notifyDelegate += new NotifyEvent(Filtriranje);
+            mainForm = main;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
+            mainForm.Show();
             this.Close();
         }
 

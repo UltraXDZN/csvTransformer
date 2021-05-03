@@ -13,13 +13,16 @@ namespace csvTransformer
 {
     public partial class FormUnosPodataka : Form
     {
-        public FormUnosPodataka()
+        Form mainForm { get; set; }
+        public FormUnosPodataka(Form main)
         {
             InitializeComponent();
+            mainForm = main;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
+            mainForm.Show();
             this.Close();
         }
 

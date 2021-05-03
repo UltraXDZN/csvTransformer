@@ -19,14 +19,16 @@ namespace csvTransformer
 
         private void btnUnos_Click(object sender, EventArgs e)
         {
-            FormUnosPodataka frmUnos = new FormUnosPodataka();
+            FormUnosPodataka frmUnos = new FormUnosPodataka(this);
             frmUnos.Show();
+            this.Hide();
         }
 
         private void btnPregled_Click(object sender, EventArgs e)
         {
-            FormPregled frmPregled = new FormPregled();
+            FormPregled frmPregled = new FormPregled(this);
             frmPregled.Show();
+            this.Hide();
         }
     }
 }
